@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .k1{
+        display: inline-block;
+    }
+</style>
+<body>
+    <h1>DARSHAN K B</h1>
+    <nav>
+    <ul style="margin: 0;">
+        <li class="k1"><a href="#">one</a></li>
+        <li class="k1"><a href="#">two</a></li>
+        <li class="k1"><a href="#">three</a></li>
+        <li class="k1"><a href="#">my choice</a></li>
+    </ul>
+</nav>
+<div>
+    <h2>
+        Favorite Foods
+    </h2>
+    <ul >
+        <li >apple</li>
+        <li >Pizza</li>
+        <li >Crab</li>
+        <li >Chocolate Cake</li>
+    </ul>
+</div>
+<div>
+    <h2>Achiements</h2>
+    <label for="file">Progress in this course(100%)</label>
+    <progress id="file" value="100" max="100"> 100% </progress><br>
+    <label for="file1">Progress in this course(20%)</label>&nbsp
+    <progress id="file1" value="20" max="100"> 32% </progress><br>
+    <label for="file2">Progress in this course(67%)</label>&nbsp 
+    <progress id="file2" value="67" max="100"> 32% </progress>
+</div>
+<div>
+    <h2>More About Me</h2>
+    <details>
+        <summary>My Childhood</summary>
+        <p>I grew up Ashtabula Ohio.I lived near Lake Erie and Ireally miss the sunset over the water</p>
+        <p><img src="http://www.intro-webdesign.com/images/newlogo.png" alt="lodinf">
+        This page created by darshan k b and collen van lent to learn more about web design,visit <span><a href="">introduction to web design</a></span>
+        </p>
+    </details>
+</div>
+<script>
+      console.log('person1:shows ticket')
+        console.log('person2:shows ticket')
+       
+
+const premovie=async()=>{
+    const wifecomeback = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("ticket3")
+            },3000)
+        })
+  
+ const getpopcorn=new Promise((resolve,reject)=>{
+    
+    resolve(` popcorn123`)})
+ const getbutter=new Promise((resolve,reject)=>{
+    resolve(`added butter on popcorn`)}
+    )
+ const getcooldrink= new Promise((resolve,reject)=>resolve(`cooldrink`))
+ let ticket=await wifecomeback   
+ let[popcorn,butter,cooldrink]=await Promise.all([getpopcorn,getbutter,getcooldrink])
+
+console.log(popcorn,butter,cooldrink)
+    return `person3:show ${ticket}`
+};
+premovie().then((m)=>{
+    console.log(m)
+})
+console.log('person4:shows ticket')
+console.log('person5:shows ticket')
+</script>
+</body>
+</html>

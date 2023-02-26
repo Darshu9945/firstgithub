@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DARSHAN</h1>
+    <script>
+        function buycar(){
+            return new Promise((res,rej)=>{
+            setTimeout(()=>{
+                res("buyed a car")
+            },5000)
+        })
+        }
+    
+        function palntrip(){
+            return new Promise((res,rej)=>{
+            setTimeout(()=>{
+                res("lets go to monali")
+            },2000)
+        })
+        }
+        
+        function reachedmonali(c){
+            return new Promise((res,rej)=>{
+            setTimeout(()=>{
+                res("reached a monali")
+            },1000)
+        })
+        }
+        function reachmoutain(){
+            return new Promise((res,rej)=>{
+            setTimeout(()=>{
+                res(" reached a mountain")
+            },100)
+        })
+        }
+async function fun(){
+    let msg = await buycar()
+    console.log(msg)
+    let msg1 = await palntrip()
+    console.log(msg1)
+    let msg2= await reachedmonali()
+    console.log(msg2)
+    let msg3 = await reachmoutain()
+    console.log(msg3)
+}
+fun()
+    </script>
+</body>
+</html>

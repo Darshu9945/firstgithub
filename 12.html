@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    function  divide(N,head){
+      var end = head;
+        var prev = null;
+        var curr = head;
+ 
+        /* Get pointer to last Node */
+        while (end.next != null)
+            end = end.next;
+ 
+        var new_end = end;
+ 
+        // Consider all odd nodes before getting first even node
+        while (curr.data % 2 != 0 && curr != end) {
+            new_end.next = curr;
+            curr = curr.next;
+            new_end.next.next = null;
+            new_end = new_end.next;
+        }
+ 
+     
+        if (curr.data % 2 == 0) {
+            head = curr;
+ 
+          
+            while (curr != end) {
+                if (curr.data % 2 == 0) {
+                    prev = curr;
+                    curr = curr.next;
+                } else {
+         
+                    prev.next = curr.next;
+ 
+    
+                    curr.next = null;
+ 
+                    new_end.next = curr;
+ 
+
+                    new_end = curr;
+ 
+                    curr = prev.next;
+                }
+            }
+        }
+
+        else
+            prev = curr;
+ 
+        if (new_end != end && end.data % 2 != 0) {
+            prev.next = end.next;
+            end.next = null;
+            new_end.next = end;
+        }
+    }
+
+console.log(divide(7,[1,2,3,4,5,6,7]))
+  </script>  
+</body>
+</html>

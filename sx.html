@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>javasceipt</h1>
+
+    <script>
+        console.log('person1:shows ticket')
+        console.log('person2:shows ticket')
+       
+
+const premovie=async()=>{
+    const wifecomeback = new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                resolve("ticket3")
+            },3000)
+        })
+ const getpopcorn=new Promise((resolve,reject)=>resolve(` popcorn123`))
+ const getbutter=new Promise((resolve,reject)=>resolve(`added butter on popcorn`))
+ const getcooldrink= new Promise((resolve,reject)=>resolve(`cooldrink`))
+      
+ let ticket= await wifecomeback
+ console.log(`wife:i have the ${ticket}`)
+console.log("husband:can we go in")
+ console.log('wife i need popcorn')
+
+ let popcorn=await getpopcorn
+ console.log(`husband:i got the ${popcorn}`)
+console.log("husband:can we go in")
+console.log('wife i need butter on  popcorn')
+ let butter=await getbutter 
+ console.log('husband:i got the butter on popcorn')
+ console.log("husband:can we go in")
+console.log('wife i need cooldrink')   
+let cooldrink=await getcooldrink
+console.log('husband:i got the cooldrink')
+ console.log("husband:can we go in")
+console.log('wife : ok')
+
+
+    return `person3:show ${ticket}`
+};
+premovie().then((m)=>{
+    console.log(m)
+})
+console.log('person4:shows ticket')
+console.log('person5:shows ticket')
+    </script>
+</body>
+</html>
